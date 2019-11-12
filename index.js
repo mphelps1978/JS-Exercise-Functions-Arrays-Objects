@@ -60,13 +60,8 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
  */
-function getName(id, name, email) {
-  const newObject = {
-    id: id,
-    name: name,
-    email: email
-  };
-  return "Hello, my name is " + this.name + ".";
+function getName(obj) {
+  return "Hello, my name is " + obj.name + ".";
 }
 
 /**
@@ -193,7 +188,7 @@ function getCarInfoById(inventory, id) {
     }
   }
   return (
-    "This is a " +
+   "This is a " +
     inventory[selected].car_make +
     inventory[selected].car_model +
     "."
